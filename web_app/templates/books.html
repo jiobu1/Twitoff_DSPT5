@@ -6,15 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    {% block content %}
 
-    <p>My message here</p>
+    <h2>Welcome to the Books Page</h2>
+
+    <p>{{ message }}</p>
+
+    {% if books %}
+        <ul>
+        {% for book in books %}
+            <li>{{ book["title"] }}</li>
+        {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>Books not found.</p>
+    {% endif %}
+
+{% endblock %}
 
     <ul>
         <li>Item 1</li>
         <li>Item 1</li>
         <li>Item 1</li>
     </ul>
-    
+
 </body>
 </html>
