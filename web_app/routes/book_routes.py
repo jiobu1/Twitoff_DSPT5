@@ -1,4 +1,5 @@
 # web_app/routes/book_routes.py
+# to run env FLASK_APP=hello.py flask run
 
 from flask import Blueprint, jsonify, request, render_template #, flash, redirect
 
@@ -6,7 +7,7 @@ from web_app.models import db, Book, parse_records
 
 book_routes = Blueprint("book_routes", __name__)
 
-@book_routes.route("/books.json")
+@book_routes.route("/books.json") #@ decorator which routes it should be configured to handle
 def list_books():
     #books = [
     #    {"id": 1, "title": "Book 1"},
