@@ -8,7 +8,6 @@ from web_app.services.basilica_service import connection as basilica_api_client
 twitter_routes = Blueprint("twitter_routes", __name__)
 
 @twitter_routes.route("/users/<screen_name>")
-
 def get_user(screen_name=None):
     print(screen_name)
 
@@ -46,6 +45,5 @@ def get_user(screen_name=None):
         db.session.add(db_tweet)
         counter+=1
     db.session.commit()
-    
     #return "OK"
     return render_template("user.html", user=db_user, tweets=statuses) # tweets=db_tweets

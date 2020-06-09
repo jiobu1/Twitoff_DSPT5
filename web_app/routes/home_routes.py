@@ -4,6 +4,10 @@ from flask import Blueprint
 
 home_routes = Blueprint("home_routes", __name__)
 
+@home_route("/")
+def index():
+    return render_template("prediction")
+
 @home_routes.route("/")
 def index():
     print("VISITING THE HOME PAGE")
