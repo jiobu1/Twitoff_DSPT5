@@ -1,9 +1,7 @@
 # web_app/routes/stats_routes.py
 
 from flask import Blueprint, request, jsonify, render_template
-
 from sklearn.linear_model import LogisticRegression # for example
-
 from web_app.models import User, Tweet
 from web_app.services.basilica_service import connection as basilica_api_client
 

@@ -10,7 +10,7 @@ from web_app.routes.twitter_routes import twitter_routes
 from web_app.routes.stats_routes import stats_routes
 
 DATABASE_URI = "sqlite:///twitoff_development_pt5.db" # using relative filepath
-SECRET_KEY = "temporary secret value. todo read from env var and customize on production to keep sessions secure"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 def create_app():
     app = Flask(__name__)
