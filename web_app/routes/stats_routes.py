@@ -52,7 +52,6 @@ def predict():
 
     example_embedding = basilica_api_client.embed_sentence(tweet_text, model="twitter")
     result = classifier.predict([example_embedding])
-    #breakpoint()
 
     #return jsonify({"message": "RESULTS", "most_likely": result[0]})
     return render_template("prediction_results.html",
