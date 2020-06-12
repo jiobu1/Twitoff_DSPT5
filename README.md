@@ -29,9 +29,9 @@ FLASK_APP=web_app flask run
 ``sh
 # first login to the server, then run the migration commands there:
 heroku run bash
-# ... FLASK_APP=web_app flask db init
-# ... FLASK_APP=web_app flask db migrate
-# ... FLASK_APP=web_app flask db upgrade
+... FLASK_APP=web_app flask db init
+... FLASK_APP=web_app flask db migrate
+... FLASK_APP=web_app flask db upgrade
 
 # alternatively run these detached commands (if you didn't ignore your migrations dir):
 heroku run "FLASK_APP=web_app flask db init"
