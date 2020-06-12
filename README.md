@@ -30,3 +30,5 @@
 ``heroku run "FLASK_APP=web_app flask db stamp head"``<br/>
 ``heroku run "FLASK_APP=web_app flask db migrate"``<br/>
 ``heroku run "FLASK_APP=web_app flask db upgrade"``<br/>
+
+
