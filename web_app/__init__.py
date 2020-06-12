@@ -11,7 +11,7 @@ from web_app.routes.book_routes import book_routes
 from web_app.routes.twitter_routes import twitter_routes
 from web_app.routes.stats_routes import stats_routes
 
-DATABASE_URL = os.getenv("DATABASE_URL") # using relative filepath
+DATABASE_URL = os.getenv("DATABASE_URL") # loads env var from the .env file (locally)
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 def create_app():
