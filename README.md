@@ -20,7 +20,7 @@
 
 ## Production
 ### first login to the server, then run the migration commands there:
-``heroku run bash``
+``heroku run bash``<br/>
 ``# ... FLASK_APP=web_app flask db init``<br/>
 ``# ... FLASK_APP=web_app flask db migrate``<br/>
 ``# ... FLASK_APP=web_app flask db upgrade``<br/>
